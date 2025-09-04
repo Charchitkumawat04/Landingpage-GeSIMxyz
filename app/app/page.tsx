@@ -72,6 +72,7 @@ import {
   Brain,
 } from "lucide-react"
 import Image from "next/image"
+import BuyDataPage from "./buy-data-page"
 
 interface Invoice {
   id: string
@@ -1565,52 +1566,7 @@ export default function GeSIMApp() {
         )
 
       case "data":
-        return (
-          <Card className={`${isDark ? "bg-slate-800/50 border-slate-700" : "bg-white border-slate-200"}`}>
-            <CardHeader>
-              <CardTitle className={`text-2xl ${isDark ? "text-white" : "text-slate-900"}`}>
-                Data Plans & Packages
-              </CardTitle>
-              <p className={`${isDark ? "text-slate-400" : "text-slate-600"}`}>
-                Choose from our global data plans or create custom packages.
-              </p>
-            </CardHeader>
-            <CardContent className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div
-                  className={`p-4 rounded-xl border ${isDark ? "bg-slate-700/50 border-slate-600" : "bg-slate-50 border-slate-200"}`}
-                >
-                  <h3 className={`font-bold mb-2 ${isDark ? "text-white" : "text-slate-900"}`}>Global 1GB</h3>
-                  <p className={`text-2xl font-bold mb-2 ${isDark ? "text-white" : "text-slate-900"}`}>$15</p>
-                  <p className={`text-sm ${isDark ? "text-slate-400" : "text-slate-600"}`}>Valid for 30 days</p>
-                  <Button className="w-full mt-4" size="sm">
-                    Select Plan
-                  </Button>
-                </div>
-                <div
-                  className={`p-4 rounded-xl border ${isDark ? "bg-slate-700/50 border-slate-600" : "bg-slate-50 border-slate-200"}`}
-                >
-                  <h3 className={`font-bold mb-2 ${isDark ? "text-white" : "text-slate-900"}`}>Global 5GB</h3>
-                  <p className={`text-2xl font-bold mb-2 ${isDark ? "text-white" : "text-slate-900"}`}>$45</p>
-                  <p className={`text-sm ${isDark ? "text-slate-400" : "text-slate-600"}`}>Valid for 30 days</p>
-                  <Button className="w-full mt-4" size="sm">
-                    Select Plan
-                  </Button>
-                </div>
-                <div
-                  className={`p-4 rounded-xl border ${isDark ? "bg-slate-700/50 border-slate-600" : "bg-slate-50 border-slate-200"}`}
-                >
-                  <h3 className={`font-bold mb-2 ${isDark ? "text-white" : "text-slate-900"}`}>Global 10GB</h3>
-                  <p className={`text-2xl font-bold mb-2 ${isDark ? "text-white" : "text-slate-900"}`}>$75</p>
-                  <p className={`text-sm ${isDark ? "text-slate-400" : "text-slate-600"}`}>Valid for 30 days</p>
-                  <Button className="w-full mt-4" size="sm">
-                    Select Plan
-                  </Button>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        )
+        return <BuyDataPage />
 
       case "devices":
         return (
